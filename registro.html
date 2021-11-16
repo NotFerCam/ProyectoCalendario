@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,7 @@
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
     <link href="css/main.css" rel="stylesheet" media="all">
+    <link href="css/registro.css" rel="stylesheet" media="all">
 </head>
 
 <body>
@@ -24,18 +25,18 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Registraté!</h2>
-                    <form method="POST">
+                    <form id="formulario">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Nombre</label>
-                                    <input class="input--style-4" type="text" name="first_name" id="nombre">
+                                    <input class="input--style-4" type="text" name="nombre" id="nombre" required>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Apellidos</label>
-                                    <input class="input--style-4" type="text" name="last_name" id="apell">
+                                    <input class="input--style-4" type="text" name="apell" id="apell" required>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +44,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Contraseña</label>
-                                    <input class="input--style-4" type="password" name="password" id="pass">
+                                    <input class="input--style-4" type="password" name="pass" id="pass" required>
                                 </div>
                             </div>
                             <div class="col-2">
@@ -56,57 +57,34 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">Fecha Nacimiento</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="birthday" id="fechanac">
-                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Genero</label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Hombre
-                                            <input type="radio" checked="checked" name="gender" id="hombre">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">Mujer
-                                            <input type="radio" name="gender" id="mujer">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email" id="email">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
                                     <label class="label">Numero Telefono</label>
-                                    <input class="input--style-4" type="text" name="phone" id="ntef">
+                                    <input class="input--style-4" type="number" name="ntef" id="ntef">
                                 </div>
                             </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">DNI</label>
+                                    <input class="input--style-4" type="dni" name="dni" id="dni" required>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class=" ">
+                            <div class="">
+                                <div class="">
+                                    <label class="label">Email</label>
+                                    <input class="input--style-4" type="email" name="email" id="email" required>
+                                </div>
+                            </div>                                                       
                         </div>                        
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit" id="enviar">Enviar</button>
+                            <a class="error" id="error">Las contraseñas no coinciden</a>
+                            <input type="submit" class="btn btn--radius-2 btn--blue" name="enviar" value="Enviar" id="enviar">                            
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/select2/select2.min.js"></script>
-    <script src="vendor/datepicker/moment.min.js"></script>
-    <script src="vendor/datepicker/daterangepicker.js"></script>
-    <script src="js/global.js"></script>
-
+    <script src="js/registro.js"></script>
 </body>
 </html>
