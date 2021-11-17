@@ -79,7 +79,7 @@
                             ?>
                         </a>                                                                                                  
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit" id="login" name="login">Enviar</button>
+                            <input type="submit" class="btn btn--radius-2 btn--blue" name="login" value="Enviar" id="login">
                         </div>
                     </form>
                 </div>
