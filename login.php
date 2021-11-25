@@ -65,7 +65,7 @@
                                                 session_start();
                                                 $_SESSION['email'] = $email;
 
-                                                header("Location: calendario.php");
+                                                header("Location: index.html");
                                                 exit;
                                             }else{
                                                 echo "Correo electronico o contraseña inválidos";
