@@ -1,6 +1,6 @@
 <?php
-    $primera = $_REQUEST['primera'];
-    $secundaria = $_REQUEST['secundaria'];
+    $primera = $_REQUEST['fecha1'];
+    $secundaria = $_REQUEST['fecha2'];
 
     $connection = mysqli_connect("localhost","root","toor");
     $database = "calendario";
@@ -36,7 +36,7 @@
     if($secundaria==""){        
         if(comprobarDias($connection,$table,$email)==true){
             $query = mysqli_query($connection,"INSERT $table (DIA,PROFESOR_Email) VALUES ('$primera','$email')");
-            header("Location: ../pedidaVac.php");
+            header("Location: ../calendario.php");
             exit;
         }else{
             echo("Ya has pedido el maximo de dias permitidos");
@@ -47,8 +47,8 @@
             foreach ($dias as &$valor) {
                 $query = mysqli_query($connection,"INSERT $table (DIA,PROFESOR_Email) VALUES ('$valor','$email')");
             }
-            header("Location: ../pedidaVac.php");
-            exit;            
+            header("Location: ../calendario.php");
+            exit;          
         }else{
             echo("Ya has pedido el maximo de dias permitidos");
         }

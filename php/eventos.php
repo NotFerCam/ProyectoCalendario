@@ -20,7 +20,7 @@
     }else{
         if (mysqli_errno($connection)==1062){                    
             echo "Se ha añadido un nuevo campo";  
-            header("Location: ../index.php");            
+            header("Location: ../calendario.php");            
             exit;
         }else{ 
            $numerror=mysqli_errno($connection);

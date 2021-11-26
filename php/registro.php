@@ -33,7 +33,7 @@
     if (mysqli_errno($connection)==0){
     }else{
         if (mysqli_errno($connection)==1062){
-            header("Location: ../login.php");            
+            header("Location: ../index.php");            
             exit;
         }else{ 
            $numerror=mysqli_errno($connection);

@@ -16,10 +16,14 @@
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
     <link href="css/main.css" rel="stylesheet" media="all">
-    <link href="css/calendario.css" rel="stylesheet" media="all">
+    <link href="fullcalendar/calendario.css" rel="stylesheet" media="all">
+    <link href="css/nav.css" rel="stylesheet" media="all">
 </head>
 
 <body>
+    <div class="nav">
+        <img src="img/mycalendar.png" class="logo">
+    </div>
     <div class="page-wrapper bg-gra-03 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
@@ -45,14 +49,31 @@
                             </div>                            
                         </div>                        
                         <div class="p-t-15">
-                            <input type="submit" class="btn btn--radius-2 btn--blue" name="pedirvac" value="Enviar" id="pedirvac">
+                            <input type="submit" class="btn btn--radius-2 btn--blue" name="pedirvac" value="Enviar" id="pedirvac" src="calendario.php">
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <script src="js/pedidaVac.js"></script>
+    <script>
+        document.getElementById("pedirvac").addEventListener("click",function(){
+            var primera = document.getElementById("primera").value;
+            var secundaria = document.getElementById("secundaria").value;
+
+            if(primera!=""){            
+                $.ajax({
+                    url:'php/fechas.php',
+                    type:'POST',
+                    data:{
+                        fecha1: primera,
+                        fecha2: secundaria
+                    }
+                });
+            }                
+        })
+    </script>
+    
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/select2/select2.min.js"></script>
     <script src="vendor/datepicker/moment.min.js"></script>
