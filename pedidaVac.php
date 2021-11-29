@@ -47,7 +47,8 @@
                                     </div>
                                 </div>
                             </div>                            
-                        </div>                        
+                        </div>          
+                        <a href="calendario.php">Volver al Calendario</a>              
                         <div class="p-t-15">
                             <input type="submit" class="btn btn--radius-2 btn--blue" name="pedirvac" value="Enviar" id="pedirvac" src="calendario.php">
                         </div>

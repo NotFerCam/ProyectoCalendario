@@ -21,7 +21,7 @@
 
 <body>
     <div class="nav">
-        <img src="img/mycalendar.png" class="logo">
+        <img src="img/mycalendar.png" class="logo">        
     </div>
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w680">
@@ -45,7 +45,7 @@
                                 </div>
                             </div>                                                       
                         </div>      
-                        <a href="registro.html">¿Aun no estás registrado?</a>
+                        <a href="registro.html">¿Aun no estás registrado?</a><br>
                         <a class="rojo">
                             <?php
                                 error_reporting(0);
