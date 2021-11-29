@@ -9,7 +9,20 @@
     <script src='fullcalendar/main.js'></script>
     <script src="fullcalendar/locales-all.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>  
-    <link href="css/nav.css" rel="stylesheet" media="all">
+    <link href="css/nav.css" rel="stylesheet" type="text/css">
+    <style>
+        .center{
+            float: right;  
+            width: 200px;
+            padding: 10px;
+        
+        }
+        .center a{
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>    
     <nav class="nav">

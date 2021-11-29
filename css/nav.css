@@ -9,14 +9,3 @@ body{
     width: 300px;
     padding: 10px;
 }
-.center{
-    float: right;  
-    width: 200px;
-    padding: 10px;
-
-}
-.center a{
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-}
