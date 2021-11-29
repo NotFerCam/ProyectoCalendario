@@ -5,7 +5,10 @@ body{
     background-color: rgb(0, 0, 0);
     width: 100%;
 }
-.nav>img{
+.logo{
     width: 300px;
     padding: 10px;
+}
+.logout{
+    float: right;
 }

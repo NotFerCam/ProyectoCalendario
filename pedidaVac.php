@@ -18,13 +18,29 @@
     <link href="css/main.css" rel="stylesheet" media="all">
     <link href="fullcalendar/calendario.css" rel="stylesheet" media="all">
     <link href="css/nav.css" rel="stylesheet" media="all">
+    <style>
+        .center{
+            float: right;  
+            width: 200px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .center a{
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }  
+    </style>
 </head>
 
 <body>
     <div class="nav">
         <img src="img/mycalendar.png" class="logo">
+        <div class="center">
+            <a href="index.php.php">Cerrar Sesion</a>
+        </div>   
     </div>
-    <div class="page-wrapper bg-gra-03 p-t-130 p-b-100 font-poppins">
+    <div class="page-wrapper bg-gra-03 p-t-130 p-b-100 font-poppins todo">
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body">
@@ -35,7 +51,7 @@
                                 <div class="input-group">
                                     <label class="label">Dia Inicio de Vacaciones</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="primera" id="primera" autocomplete="off">
+                                        <input class="input--style-4 js-datepicker" type="text" name="primera" id="primera" autocomplete="off" required>
                                         <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                     </div>
                                 </div>
