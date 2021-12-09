@@ -18,26 +18,14 @@
     <link href="css/main.css" rel="stylesheet" media="all">
     <link href="fullcalendar/calendario.css" rel="stylesheet" media="all">
     <link href="css/nav.css" rel="stylesheet" media="all">
-    <style>
-        .center{
-            float: right;  
-            width: 200px;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        .center a{
-            text-decoration: none;
-            color: white;
-            padding: 10px;
-        }  
-    </style>
+    <link href="css/pedidaVac.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <div class="nav">
         <img src="img/mycalendar.png" class="logo">
         <div class="center">
-            <a href="index.php.php">Cerrar Sesion</a>
+            <a href="index.php">Cerrar Sesion</a>
         </div>   
     </div>
     <div class="page-wrapper bg-gra-03 p-t-130 p-b-100 font-poppins todo">
@@ -73,23 +61,7 @@
             </div>
         </div>
     </div>
-    <script>
-        document.getElementById("pedirvac").addEventListener("click",function(){
-            var primera = document.getElementById("primera").value;
-            var secundaria = document.getElementById("secundaria").value;
-
-            if(primera!=""){            
-                $.ajax({
-                    url:'php/fechas.php',
-                    type:'POST',
-                    data:{
-                        fecha1: primera,
-                        fecha2: secundaria
-                    }
-                });
-            }                
-        })
-    </script>
+    <script src="js/pedidaVac.js"></script>
     
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/select2/select2.min.js"></script>

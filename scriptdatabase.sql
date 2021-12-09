@@ -15,7 +15,7 @@ CREATE SCHEMA IF NOT EXISTS `Calendario` DEFAULT CHARACTER SET utf8 ;
 USE `Calendario` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`PROFESOR`
+-- Table `Calendario`.`PROFESOR`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Calendario`.`PROFESOR` (
   `DNI` VARCHAR(9) NOT NULL,
@@ -32,7 +32,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`VACACIONES`
+-- Table `Calendario`.`VACACIONES`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Calendario`.`VACACIONES` (
   `DIA` DATE NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `Calendario`.`VACACIONES` (
   INDEX `fk_VACACIONES_PROFESOR_idx` (`PROFESOR_DNI` ASC),
   CONSTRAINT `fk_VACACIONES_PROFESOR`
     FOREIGN KEY (`PROFESOR_DNI`)
-    REFERENCES `mydb`.`PROFESOR` (`DNI`)
+    REFERENCES `Calendario`.`PROFESOR` (`DNI`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
